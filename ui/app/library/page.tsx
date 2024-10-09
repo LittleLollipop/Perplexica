@@ -21,7 +21,8 @@ const Page = () => {
     const fetchChats = async () => {
       setLoading(true);
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chats`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_API_1}/chats`, {
+        // credentials: 'include',
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

@@ -20,8 +20,10 @@ const DeleteChat = ({
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/chats/${chatId}`,
+        // process.env.NEXT_PUBLIC_API_URL_API_4
+        `https://${window.location.hostname}/api/chats/${chatId}`,
         {
+          // credentials: 'include',
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

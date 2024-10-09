@@ -34,8 +34,9 @@ const SearchImages = ({
             const chatModel = localStorage.getItem('chatModel');
 
             const res = await fetch(
-              `${process.env.NEXT_PUBLIC_API_URL}/images`,
+              `${process.env.NEXT_PUBLIC_API_URL_API_5}/images`,
               {
+                // credentials: 'include',
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
