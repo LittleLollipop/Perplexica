@@ -39,7 +39,7 @@ const SearchImages = ({
             const customOpenAIBaseURL = localStorage.getItem('openAIBaseURL');
             const customOpenAIKey = localStorage.getItem('openAIApiKey');
 
-            const res = await fetch(`/api/images`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_API_5}/api/images`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
